@@ -1,0 +1,6 @@
+D:\sam\topgear\traininng\webJobLogger\bin\Debug\webJobLogger.exe.config
+D:\sam\topgear\traininng\webJobLogger\bin\Debug\webJobLogger.exe
+D:\sam\topgear\traininng\webJobLogger\bin\Debug\webJobLogger.pdb
+D:\sam\topgear\traininng\webJobLogger\obj\Debug\webJobLogger.csproj.CoreCompileInputs.cache
+D:\sam\topgear\traininng\webJobLogger\obj\Debug\webJobLogger.exe
+D:\sam\topgear\traininng\webJobLogger\obj\Debug\webJobLogger.pdb
