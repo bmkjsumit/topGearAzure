@@ -5,11 +5,9 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "topGearApp", "topGearApp\topGearApp.csproj", "{0C0A0B0C-2391-4F9D-B006-2A7A322C563D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "topGearWebJob", "topGearWebJob\topGearWebJob.csproj", "{8F284964-2B5A-494D-A212-272354DBB5F8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webJobLogging", "webJobLogging\webJobLogging.csproj", "{AD987890-B44F-4A81-9159-622F79FE2CAE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webJobLogger", "webJobLogger\webJobLogger.csproj", "{F6C4CB7C-EA39-43F5-8962-3417ED7AA1AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "algo", "algo\algo.csproj", "{3CA280D7-90C6-4252-9184-A44D433B0B3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +19,14 @@ Global
 		{0C0A0B0C-2391-4F9D-B006-2A7A322C563D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C0A0B0C-2391-4F9D-B006-2A7A322C563D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C0A0B0C-2391-4F9D-B006-2A7A322C563D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F284964-2B5A-494D-A212-272354DBB5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F284964-2B5A-494D-A212-272354DBB5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F284964-2B5A-494D-A212-272354DBB5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F284964-2B5A-494D-A212-272354DBB5F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD987890-B44F-4A81-9159-622F79FE2CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD987890-B44F-4A81-9159-622F79FE2CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD987890-B44F-4A81-9159-622F79FE2CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD987890-B44F-4A81-9159-622F79FE2CAE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6C4CB7C-EA39-43F5-8962-3417ED7AA1AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6C4CB7C-EA39-43F5-8962-3417ED7AA1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6C4CB7C-EA39-43F5-8962-3417ED7AA1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6C4CB7C-EA39-43F5-8962-3417ED7AA1AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CA280D7-90C6-4252-9184-A44D433B0B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA280D7-90C6-4252-9184-A44D433B0B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA280D7-90C6-4252-9184-A44D433B0B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA280D7-90C6-4252-9184-A44D433B0B3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

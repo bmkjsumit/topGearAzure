@@ -1,0 +1,7 @@
+D:\sam\topgear\topGearAzure\algo\bin\Debug\algo.exe.config
+D:\sam\topgear\topGearAzure\algo\bin\Debug\algo.exe
+D:\sam\topgear\topGearAzure\algo\bin\Debug\algo.pdb
+D:\sam\topgear\topGearAzure\algo\obj\Debug\algo.csprojAssemblyReference.cache
+D:\sam\topgear\topGearAzure\algo\obj\Debug\algo.csproj.CoreCompileInputs.cache
+D:\sam\topgear\topGearAzure\algo\obj\Debug\algo.exe
+D:\sam\topgear\topGearAzure\algo\obj\Debug\algo.pdb

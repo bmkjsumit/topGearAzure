@@ -30,7 +30,7 @@ namespace topGearApp.Controllers
                 /* The next four lines of code show you how to use AppAuthentication library to fetch secrets from your key vault */
                 AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
                 KeyVaultClient keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
-                var secret = await keyVaultClient.GetSecretAsync("https://firstdemokeyvault.vault.azure.net/secrets/AppSecret").ConfigureAwait(false);
+                var secret = await keyVaultClient.GetSecretAsync("https://seconddemokeyvault.vault.azure.net/secrets/AppSecret").ConfigureAwait(false);
                 ViewData["Message"] = secret.Value;
             }
             /* If you have throttling errors see this tutorial https://docs.microsoft.com/azure/key-vault/tutorial-net-create-vault-azure-web-app */
@@ -62,6 +62,7 @@ namespace topGearApp.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        #region helpers
         // This method implements exponential backoff if there are 429 errors from Azure Key Vault
         private static long getWaitTime(int retryCount)
         {
@@ -76,5 +77,6 @@ namespace topGearApp.Controllers
             string accessToken = await azureServiceTokenProvider.GetAccessTokenAsync("https://vault.azure.net");
             return accessToken;
         }
+        #endregion
     }
 }
