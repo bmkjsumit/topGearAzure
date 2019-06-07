@@ -180,71 +180,91 @@ namespace algo
             #endregion
 
             #region rotate the matrix by 90 degrees in clockwise
-            var key = Console.ReadLine();
-            int resultTestCases = int.Parse(key);
+            //var key = Console.ReadLine();
+            //int resultTestCases = int.Parse(key);
 
-            //List<int> lstMatrixSize = new List<int>();
-           
-            List<List<string>> lstMatrix = new List<List<string>>();
-            for (int i = 0; i < resultTestCases; i++)
-            {
-                var size = int.Parse(Console.ReadLine().Trim());
-                List<string> matrix = new List<string>();
-                for (int j = 1; j <= size; j++)
-                {
-                    matrix.Add(Console.ReadLine().Trim());
-                }
-                lstMatrix.Add(matrix);
-            }
-            int testCases = 1;
-            foreach (var matrixItem in lstMatrix)
-            {
-                //int[,] arr = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };                
-                Console.WriteLine("Test Case #{0}:", testCases);
-                var R = matrixItem.Count;
-                var C = matrixItem.Count;
-                int N = matrixItem.Count;
-                var a = new int[R, C];
-                for (int r = 0; r != R; r++)
-                    for (int c = 0; c != C; c++)
-                        a[r, c] = Convert.ToInt32(matrixItem[r].Split()[c]);
+            ////List<int> lstMatrixSize = new List<int>();
 
-                // Traverse each cycle 
-                for (int i = 0; i < N / 2; i++)
-                {
-                    for (int j = i; j < N - i - 1; j++)
-                    {
+            //List<List<string>> lstMatrix = new List<List<string>>();
+            //for (int i = 0; i < resultTestCases; i++)
+            //{
+            //    var size = int.Parse(Console.ReadLine().Trim());
+            //    List<string> matrix = new List<string>();
+            //    for (int j = 1; j <= size; j++)
+            //    {
+            //        matrix.Add(Console.ReadLine().Trim());
+            //    }
+            //    lstMatrix.Add(matrix);
+            //}
+            //int testCases = 1;
+            //foreach (var matrixItem in lstMatrix)
+            //{
+            //    //int[,] arr = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };                
+            //    Console.WriteLine("Test Case #{0}:", testCases);
+            //    var R = matrixItem.Count;
+            //    var C = matrixItem.Count;
+            //    int N = matrixItem.Count;
+            //    var a = new int[R, C];
+            //    for (int r = 0; r != R; r++)
+            //        for (int c = 0; c != C; c++)
+            //            a[r, c] = Convert.ToInt32(matrixItem[r].Split()[c]);
 
-                        // Swap elements of each cycle 
-                        // in clockwise direction 
-                        int temp = a[i, j];
-                        a[i, j] = a[N - 1 - j, i];
-                        a[N - 1 - j, i] = a[N - 1 - i, N - 1 - j];
-                        a[N - 1 - i, N - 1 - j] = a[j, N - 1 - i];
-                        a[j, N - 1 - i] = temp;
-                    }
-                }
-                // Function for print matrix 
-                for (int i = 0; i < N; i++)
-                {
-                    for (int j = 0; j < N; j++)
-                        Console.Write(a[i, j] + " ");
-                    Console.Write("\n");
-                }
-                //for (int i = matrixItem.Count()-1; i >=0 ; i--)
-                //{
-                //    int k = 0;
-                //    for (int j = 0; j <= matrixItem.Count() - 1; j++)
-                //    {
-                //        Console.Write(matrixItem[i].Split(' ')[k]);  k++;
-                //    }                    
-                //    Console.Write("\n");
-                //}                
-                testCases++;
-                //Console.Write("\n");
-            }
-            Console.ReadKey();
+            //    // Traverse each cycle 
+            //    for (int i = 0; i < N / 2; i++)
+            //    {
+            //        for (int j = i; j < N - i - 1; j++)
+            //        {
+
+            //            // Swap elements of each cycle in clockwise direction 
+            //            int temp = a[i, j];
+            //            a[i, j] = a[N - 1 - j, i];
+            //            a[N - 1 - j, i] = a[N - 1 - i, N - 1 - j];
+            //            a[N - 1 - i, N - 1 - j] = a[j, N - 1 - i];
+            //            a[j, N - 1 - i] = temp;
+            //        }
+            //    }
+            //    // Function for print matrix 
+            //    for (int i = 0; i < N; i++)
+            //    {
+            //        for (int j = 0; j < N; j++)
+            //            Console.Write(a[i, j] + " ");
+            //        Console.Write("\n");
+            //    }
+            //    //for (int i = matrixItem.Count()-1; i >=0 ; i--)
+            //    //{
+            //    //    int k = 0;
+            //    //    for (int j = 0; j <= matrixItem.Count() - 1; j++)
+            //    //    {
+            //    //        Console.Write(matrixItem[i].Split(' ')[k]);  k++;
+            //    //    }                    
+            //    //    Console.Write("\n");
+            //    //}                
+            //    testCases++;
+            //    //Console.Write("\n");
+            //}
+            //Console.ReadKey();
             #endregion
+        }
+
+    }
+    public class HexFile
+    {
+
+        public string[] Record { get; private set; }
+        public HexFile(string path)
+        {
+            this.Record = System.IO.File.ReadAllLines(path);            
+        }
+
+    }
+    // code under test
+    public static class Y2KChecker
+    {
+        public static void Check()
+        {
+            //public static int Record { get; private set; }
+            if (DateTime.Now == new DateTime(2000, 1, 1))
+                throw new ApplicationException("y2kbug!");
         }
     }
 }
