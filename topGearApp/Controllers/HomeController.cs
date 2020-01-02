@@ -30,7 +30,8 @@ namespace topGearApp.Controllers
                 /* The next four lines of code show you how to use AppAuthentication library to fetch secrets from your key vault */
                 AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
                 KeyVaultClient keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
-                var secret = await keyVaultClient.GetSecretAsync("https://seconddemokeyvault.vault.azure.net/secrets/AppSecret").ConfigureAwait(false);
+                var secret = await keyVaultClient.GetSecretAsync("https://demokeyvaultest.vault.azure.net/secrets/test/eaf58433ba5f4e01a62b7631fc840525").ConfigureAwait(false);
+                //https://seconddemokeyvault.vault.azure.net/secrets/AppSecret
                 ViewData["Message"] = secret.Value;
             }
             /* If you have throttling errors see this tutorial https://docs.microsoft.com/azure/key-vault/tutorial-net-create-vault-azure-web-app */
